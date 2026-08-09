@@ -9,7 +9,7 @@ process getDataCSV {
         'docker://yuanli202004/seurat5.4_doubletfinder:latest' }"
 
     input:
-        tuple path(INFILE)
+        path(INFILE)
 
     output:
         path("layer_csvs/"), emit: layer_csvs_dir

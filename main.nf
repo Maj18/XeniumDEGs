@@ -33,7 +33,7 @@ workflow {
     // **************** 1. Save layer normalized data to scv files ****************
     ch_INFILE = Channel.value(params.INFILE)
     getDataCSV(ch_INFILE)
-    ch_layer_csvs_dir = ch_INFILE.out.layer_csvs_dir
+    ch_layer_csvs_dir = getDataCSV.out.layer_csvs_dir
 
 }
 
